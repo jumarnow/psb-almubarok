@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Santri;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use PDF;
 
 class SantriController extends Controller
 {
@@ -19,12 +20,18 @@ class SantriController extends Controller
 
     public function pernyataan_pdf()
     {
-        // $paper_size = array(0, 0, 612.00, 936.00);
-        // $pd = PesertaDidik::whereSemesterId(session()->get('semester_id'))->whereNisn($nisn)->first();
-        // $sekolah = Sekolah::first();
-        // $skhun = NilaiSkhun::whereNisn($nisn)->get();
-        // $pdf = PDF::loadView('cetak_skl.pdf_skhun',compact('skhun','pd','sekolah'))->setPaper($paper_size);
-        // return $pdf->stream('Nilai Semester '.$pd->nama.'.pdf');
+        $data['santri'] = Santri::whereNik(request()->nik)->first();
+        $paper_size = array(0, 0, 612.00, 936.00);
+        $pdf = PDF::loadView('santri.pernyataan_pdf',$data)->setPaper($paper_size);
+        return $pdf->stream('Pernyataan_'.$data['santri']->nama.'.pdf');
+    }
+
+    public function formulir_pdf()
+    {
+        $data['santri'] = Santri::whereNik(request()->nik)->first();
+        $paper_size = array(0, 0, 612.00, 936.00);
+        $pdf = PDF::loadView('santri.formulir_pdf',$data)->setPaper($paper_size);
+        return $pdf->stream('Formulir_'.$data['santri']->nama.'.pdf');
     }
 
     /**

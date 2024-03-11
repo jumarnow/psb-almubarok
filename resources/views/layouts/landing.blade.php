@@ -8,8 +8,8 @@
 
     <meta name="description" content="Daftar Santri Baru Pondok Pesantren Al Mubarok Mranggen Demak">
     <meta property="og:url" content="https://www.daftar.almubarokmranggen.id">
-    <meta property="og:title" content="Daftar Santri Baru Al Mubarok Mranggen"/>
-    <meta property="og:description" content="Daftar Santri Baru Pondok Pesantren Al Mubarok Mranggen Demak"/>
+    <meta property="og:title" content="Daftar Santri Baru Al Mubarok Mranggen" />
+    <meta property="og:description" content="Daftar Santri Baru Pondok Pesantren Al Mubarok Mranggen Demak" />
     <meta property="og:image" content="https://almubarokmranggen.id/wp-content/uploads/2023/08/LOGO-ALBA-HITAM.png">
     <meta property="og:site_name" content="Al Mubarok Mranggen">
     <meta property="og:ttl" content="3600">
@@ -73,7 +73,7 @@
             <nav class="navbar navbar-expand-lg main-navbar">
                 <a href="." class="navbar-brand sidfebar-gone-hide d-none d-sm-block">
                     {{-- <img src="{{ asset('assets') }}/img/logo/logo436.png" width="50"> --}}
-                        Al Mubarok Mranggen </a>
+                    Al Mubarok Mranggen </a>
                 <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i
                         class="fas fa-bars"></i></a>
                 <form class="form-inline ml-auto">
@@ -85,8 +85,7 @@
 
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image"
-                                src="{{ asset('assets') }}/img/avatar/avatar-1.png"
+                            <img alt="image" src="{{ asset('assets') }}/img/avatar/avatar-1.png"
                                 class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">Login Masuk</div>
                         </a>
@@ -111,7 +110,7 @@
                                     class="fas fa-edit    "></i><span>Isi Formulir</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link klikmenu" data-id="daftar"><i
+                            <a href="{{ url('cek_pendaftaran') }}" class="nav-link klikmenu" data-id="daftar"><i
                                     class="fas fa-user-friends"></i><span>Cek Pendaftaran</span></a>
                         </li>
                         <li class="nav-item">
@@ -133,8 +132,7 @@
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2024 Al Mubarok <div class="bullet"></div> Design By <a
-                        href="">Stisla</a>
+                    Copyright &copy; 2024 Al Mubarok <div class="bullet"></div> Design By <a href="">Stisla</a>
                 </div>
                 <div class="footer-right">
 
@@ -172,9 +170,20 @@
         $('.loader').fadeOut('slow');
     </script>
     <script>
-        $(".datepicker").datepicker({ dateFormat: "dd-mm-yy" });
+        $(".datepicker").datepicker({
+            dateFormat: "dd-mm-yy"
+        });
     </script>
     @yield('js')
+    <script>
+        if ("{{ Session::get('success') }}") {
+            iziToast.success({
+                title: 'Mantap!',
+                message: 'Data berhasil disimpan',
+                position: 'topRight'
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -13,6 +13,12 @@ class FormulirController extends Controller
         return view('landing.formulir');
     }
 
+    public function cek_pendaftaran()
+    {
+        $data['santri'] = Santri::whereNik(request()->nik)->first();
+        return view('landing.cek_pendaftaran', $data);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -74,8 +80,8 @@ class FormulirController extends Controller
         $santri->save();
 
         // Redirect atau lakukan tindakan sesuai kebutuhan setelah penyimpanan berhasil
-        // return redirect()->route('santri.index')->with('success', 'Data santri berhasil disimpan.');
-        return back();
+        return redirect('cek_pendaftaran?nik='.$santri->nik)->with('success', 'Data santri berhasil disimpan.');
+        // return back();
 
     }
 

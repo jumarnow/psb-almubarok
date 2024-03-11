@@ -30,7 +30,7 @@
                                                 <th>Nama</th>
                                                 <th>Gender</th>
                                                 <th>TTL</th>
-                                                <th>Sekolah</th>
+                                                <th>Alamat</th>
                                                 <th>Opsi</th>
                                             </tr>
                                         </thead>
@@ -45,11 +45,11 @@
                                                 <td>{{ $item->nik }}</td>
                                                 <td>{{ $item->nama }}</td>
                                                 <td>{{ $item->jenis_kelamin }}</td>
-                                                <td>{{ $item->tempat_lahir }}, {{ $item->tanggal_lahir }}</td>
-                                                <td></td>
+                                                <td>{{ $item->tempat_lahir }}, {{ Carbon\Carbon::parse($item->tanggal_lahir)->isoFormat('DD MMMM Y') }}</td>
+                                                <td>{{ $item->alamat_lengkap }}</td>
                                                 <td>
-                                                    <a href="{{ url('formulir_pdf', $item->nik) }}" class="btn btn-warning btn-sm"> <i class="fa fa-print"></i>&nbsp; Formulir</a>
-                                                    <a href="{{ url('pernyataan_pdf', $item->nik) }}" class="btn btn-warning btn-sm"> <i class="fa fa-print"></i>&nbsp; Pernyatan</a>
+                                                    <a target="blank" href="{{ url('formulir_pdf?nik=').$item->nik }}" class="btn btn-warning btn-sm"> <i class="fa fa-print"></i>&nbsp; Formulir</a>
+                                                    <a target="blank" href="{{ url('pernyataan_pdf?nik=').$item->nik }}" class="btn btn-warning btn-sm"> <i class="fa fa-print"></i>&nbsp; Pernyatan</a>
                                                 </td>
                                             </tr>
                                             @endforeach

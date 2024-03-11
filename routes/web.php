@@ -28,7 +28,7 @@ Auth::routes(['register' => false]);
 
 Route::get('/', [LandingController::class,'index']);
 Route::get('formulir', [FormulirController::class,'index']);
-// Route::get('cek-pendaftaran', [FormulirController::class,'cek-pendaftaran']);
+Route::get('cek_pendaftaran', [FormulirController::class,'cek_pendaftaran']);
 Route::post('formulir/store', [FormulirController::class, 'store']);
 Route::get('pernyataan_pdf', [SantriController::class,'pernyataan_pdf']);
 Route::get('formulir_pdf', [SantriController::class,'formulir_pdf']);
