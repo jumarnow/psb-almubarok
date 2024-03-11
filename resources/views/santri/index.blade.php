@@ -39,7 +39,6 @@
                                                 $no = 1;
                                             @endphp
                                             @foreach ($santri as $k=>$item)
-                                            @endforeach
                                             <tr>
                                                 <td>{{ $no++ }}</td>
                                                 <td>{{ $item->created_at }}</td>
@@ -53,6 +52,7 @@
                                                     <a href="{{ url('pernyataan_pdf', $item->nik) }}" class="btn btn-warning btn-sm"> <i class="fa fa-print"></i>&nbsp; Pernyatan</a>
                                                 </td>
                                             </tr>
+                                            @endforeach
 
                                         </tbody>
 
