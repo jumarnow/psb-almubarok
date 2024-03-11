@@ -91,7 +91,7 @@
                             <div class="d-sm-none d-lg-inline-block">Login Masuk</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a href="/admin" data-id="login" class=" klikmenu dropdown-item has-icon ">
+                            <a href="{{ url('admin') }}" data-id="login" class=" klikmenu dropdown-item has-icon ">
                                 <i class="fas fa-sign-out-alt"></i> Akses Admin
                             </a>
                         </div>
