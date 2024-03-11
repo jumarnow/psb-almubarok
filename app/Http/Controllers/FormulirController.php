@@ -74,7 +74,8 @@ class FormulirController extends Controller
         $santri->save();
 
         // Redirect atau lakukan tindakan sesuai kebutuhan setelah penyimpanan berhasil
-        return redirect()->route('santri.index')->with('success', 'Data santri berhasil disimpan.');
+        // return redirect()->route('santri.index')->with('success', 'Data santri berhasil disimpan.');
+        return back();
 
     }
 
