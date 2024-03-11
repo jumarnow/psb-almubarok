@@ -6,6 +6,14 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Daftar Al Mubarok</title>
 
+    <meta name="description" content="Daftar Santri Baru Pondok Pesantren Al Mubarok Mranggen Demak">
+    <meta property="og:url" content="https://www.daftar.almubarokmranggen.id">
+    <meta property="og:title" content="Daftar Santri Baru Al Mubarok Mranggen"/>
+    <meta property="og:description" content="Daftar Santri Baru Pondok Pesantren Al Mubarok Mranggen Demak"/>
+    <meta property="og:image" content="https://almubarokmranggen.id/wp-content/uploads/2023/08/LOGO-ALBA-HITAM.png">
+    <meta property="og:site_name" content="Al Mubarok Mranggen">
+    <meta property="og:ttl" content="3600">
+
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets') }}/modules/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('assets') }}/modules/fontawesome/css/all.min.css">
@@ -55,7 +63,7 @@
     <div class='loader'></div>
     <div class="chating" style=" z-index: 99999; width: 50px; padding: 15px;  bottom: 0; position: fixed; ">
         <a
-            href="https://api.whatsapp.com/send?phone=+62083824256611&text=Assalamualaikum%2525252C%25252Bmohon%25252Binfo%25252Bpendaftaran">
+            href="https://api.whatsapp.com/send?phone=+6285701885618&text=Assalamualaikum%2525252C%25252Bmohon%25252Binfo%25252Bpendaftaran">
 
             <img src="{{ asset('assets') }}/img/wa.png" width="150"> </a>
     </div>
@@ -95,7 +103,7 @@
                 <div class="container">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link klikmenu" data-id="beranda"><i
+                            <a href="{{ url('/') }}" class="nav-link klikmenu" data-id="beranda"><i
                                     class="fas fa-home"></i><span>Home</span></a>
                         </li>
                         <li class="nav-item">
