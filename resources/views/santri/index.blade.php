@@ -35,10 +35,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @php
+                                                $no = 1;
+                                            @endphp
                                             @foreach ($santri as $k=>$item)
                                             @endforeach
                                             <tr>
-                                                <td>{{ $k+1 }}</td>
+                                                <td>{{ $no++ }}</td>
                                                 <td>{{ $item->created_at }}</td>
                                                 <td>{{ $item->nik }}</td>
                                                 <td>{{ $item->nama }}</td>
