@@ -121,7 +121,7 @@
                                     <select name="provinsi" id="provinsi" class="form-control select2" required>
                                         <option value="">PILIH PROVINSI</option>
                                         @foreach (getProvinsi() as $item)
-                                        <option value="{{ $item['id'] }}">{{ $item['name'] }}</option>
+                                        <option value="{{ $item['id'] }},{{ $item['name'] }}">{{ $item['name'] }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -259,7 +259,6 @@
                             <button id="btnsimpan" type="submit" class="btn btn-lg btn-primary">SIMPAN DATA</button>
                         </div>
                     </div>
-
                 </form>
             </div>
 
@@ -317,24 +316,33 @@
 </script>
 <script>
     $(document).on('change','#provinsi', function(){
-        $.get("{{ url('https://jumarnow.github.io/api-wilayah-indonesia/api/regencies/') }}"+$(this).val()+".json", function(data){
+        let provinsi = $(this).val();
+        let provinsiArr = provinsi.split(',');
+        $.get("{{ url('https://jumarnow.github.io/api-wilayah-indonesia/api/regencies/') }}"+provinsiArr[0]+".json", function(data){
             $('#kabupaten').empty();
             // console.log(data);
             $('#kabupaten').append('<option value="">PILIH KABUPATEN/KOTA</option>');
             $.each(data, function(index, kabupaten){
-                $('#kabupaten').append('<option value="' + kabupaten.id + '">' + kabupaten.name + '</option>');
+                $('#kabupaten').append('<option value="' + kabupaten.id+','+kabupaten.name + '">' + kabupaten.name + '</option>');
             });
         })
     })
     $(document).on('change','#kabupaten', function(){
-        $.get("{{ url('https://jumarnow.github.io/api-wilayah-indonesia/api/districts/') }}"+$(this).val()+".json", function(data){
+        let kabupaten = $(this).val();
+        let kabupatenArr = kabupaten.split(',');
+        console.log(kabupatenArr);
+        $.get("{{ url('https://jumarnow.github.io/api-wilayah-indonesia/api/districts/') }}"+kabupatenArr[0]+".json", function(data){
             $('#kecamatan').empty();
             // console.log(data);
             $('#kecamatan').append('<option value="">PILIH KABUPATEN/KOTA</option>');
             $.each(data, function(index, kecamatan){
-                $('#kecamatan').append('<option value="' + kecamatan.id + '">' + kecamatan.name + '</option>');
+                $('#kecamatan').append('<option value="' + kecamatan.id+','+ kecamatan.name+ '">' + kecamatan.name + '</option>');
             });
         })
+    })
+    $(document).on('change','#kecamatan', function(){
+        let kecamatan = $(this).val();
+        let kecamatanArr = kecamatan.split(',');
     })
 </script>
 @endsection

@@ -101,6 +101,8 @@
         <div class="text1">PONDOK PESANTREN AL MUBAROK</div>
         <div class="text2">Tahun Ajaran 2024/2025</div>
 
+        <br>
+
         <table class="table_data">
             <tr>
                 <td style="width: 20px"><b>A.</b></td>
@@ -177,6 +179,8 @@
                 <td>: {{ $santri->kebutuhan_disabilitas }}</td>
             </tr>
         </table>
+
+        <div style="margin-bottom: 6px"></div>
 
         <table class="table_data">
             <tr>
@@ -265,6 +269,9 @@
             </tr>
         </table>
 
+        <div class="page_break"></div>
+        <br><br>
+
         <table class="table_data">
             <tr>
                 <td style="width: 20px"><b>C.</b></td>
@@ -294,6 +301,37 @@
                 <td></td>
                 <td>Alamat Lengkap</td>
                 <td>: {{ $santri->alamat_lengkap }}</td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <table class="table_data">
+            <tr>
+                <td colspan="3" style="text_align: right">Mranggen, {{ Carbon\Carbon::now()->isoFormat('DD MMMM Y') }}</td>
+            </tr>
+            <tr>
+                <td style="width: 180">Saksi I</td>
+                <td style="width: 180">Saksi II</td>
+                <td>Yang menyatakan,</td>
+            </tr>
+            <tr>
+                <td>Orang Tua Santri</td>
+                <td>Pengurus Pesantren</td>
+                <td>Santri</td>
+            </tr>
+        </table>
+        <br><br><br><br>
+
+        <table class="table_data">
+            <tr>
+                <td style="width: 180">----------------</td>
+                @if(auth()->check())
+                <td style="width: 180"> <b><u>{{ Auth::user()->name }}</u></b></td>
+                @else
+                <td style="width: 180">----------------</td>
+                @endif
+                <td><b><u>{{ $santri->nama }}</u></b></td>
             </tr>
         </table>
 

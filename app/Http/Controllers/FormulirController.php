@@ -46,13 +46,17 @@ class FormulirController extends Controller
         $santri->jumlah_saudara = $request->input('jumlah_saudara');
         // dan seterusnya...
 
+        $provinsiArr = explode(',',request()->provinsi);
+        $kabupatenArr = explode(',',request()->kabupaten);
+        $kecamatanArr = explode(',',request()->kecamatan);
+
         // Simpan alamat santri
-        $santri->provinsi = $request->input('provinsi');
-        $santri->kabupaten = $request->input('kabupaten');
-        $santri->kecamatan = $request->input('kecamatan');
-        $santri->provinsi_alt = $request->input('provinsi_alt');
-        $santri->kabupaten_alt = $request->input('kabupaten_alt');
-        $santri->kecamatan_alt = $request->input('kecamatan_alt');
+        $santri->provinsi = $provinsiArr[0];
+        $santri->kabupaten = $kabupatenArr[0];
+        $santri->kecamatan = $kecamatanArr[0];
+        $santri->provinsi_alt = $provinsiArr[1];
+        $santri->kabupaten_alt = $kabupatenArr[1];
+        $santri->kecamatan_alt = $kecamatanArr[1];
         $santri->kelurahan = $request->input('kelurahan');
         $santri->alamat_lengkap = $request->input('alamat_lengkap');
 

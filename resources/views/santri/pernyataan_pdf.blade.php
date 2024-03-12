@@ -168,12 +168,16 @@
                     <td>Santri</td>
                 </tr>
             </table>
-            <br><br><br>
+            <br><br><br><br>
 
             <table>
                 <tr>
                     <td style="width: 180">----------------</td>
+                    @if(auth()->check())
+                    <td style="width: 180"> <b><u>{{ Auth::user()->name }}</u></b></td>
+                    @else
                     <td style="width: 180">----------------</td>
+                    @endif
                     <td><b><u>{{ $santri->nama }}</u></b></td>
                 </tr>
             </table>

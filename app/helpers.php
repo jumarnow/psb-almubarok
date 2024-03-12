@@ -30,3 +30,10 @@ function getProvinsi()
     $data = json_decode($responseBody, true);
     return $data;
 }
+
+function daerahAlt($num)
+{
+    if ($num == 1) {
+        
+    }
+}
