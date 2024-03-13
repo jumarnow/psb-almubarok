@@ -35,6 +35,11 @@
                                         aria-selected="false">Syarat Pendaftaran</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" id="" data-toggle="tab"
+                                        href="#administrasi" role="tab" aria-controls="profile"
+                                        aria-selected="false">Administrasi Pendaftaran</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" id="contact-tab4" data-toggle="tab"
                                         href="#contact4" role="tab" aria-controls="contact"
                                         aria-selected="true">Kontak Pendaftaran</a>
@@ -114,6 +119,15 @@
                                     <ul>
                                         <li>Fotokopi KK 1 Lembar dan KTP Orang Tua 1 Lembar</li>
                                     </ul>
+                                </div>
+                                <div class="tab-pane fade" id="administrasi" role="tabpanel"
+                                    aria-labelledby="profile-tab4">
+                                    {{-- <p>ADMINISTRASI PENDAFTARAN</p> --}}
+                                    <h5>ADMINISTRASI SANTRI PUTRA</h5>
+                                    <img src="{{ asset('administrasi_pa.png') }}" alt="Administrasi Santri Putra">
+                                    <br><br>
+                                    <h5>ADMINISTRASI SANTRI PUTRI</h5>
+                                    <img src="{{ asset('administrasi_pi.png') }}" alt="Administrasi Santri Putri">
                                 </div>
                                 <div class="tab-pane fade " id="contact4" role="tabpanel"
                                     aria-labelledby="contact-tab4">

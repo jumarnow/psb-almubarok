@@ -77,10 +77,13 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
 
-                            <a href="?pg=detail" class="dropdown-item has-icon">
+                            <a href="{{ url('/') }}" class="dropdown-item has-icon">
+                                <i class="fas fa-home"></i> Landing Page
+                            </a>
+                            <a href="#" class="dropdown-item has-icon">
                                 <i class="fas fa-cog"></i> Profil
                             </a>
-                            <div class="dropdown-divider"></div>
+                            {{-- <div class="dropdown-divider"></div> --}}
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                 style="display: none;">
                                 @csrf
