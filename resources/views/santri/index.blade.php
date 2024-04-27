@@ -31,6 +31,7 @@
                                                 <th>Gender</th>
                                                 <th>TTL</th>
                                                 <th>Alamat</th>
+                                                <th>Dokumen</th>
                                                 <th>Opsi</th>
                                             </tr>
                                         </thead>
@@ -50,6 +51,9 @@
                                                 <td>
                                                     <a target="blank" href="{{ url('formulir_pdf?nik=').$item->nik }}" class="btn btn-warning btn-sm"> <i class="fa fa-print"></i>&nbsp; Formulir</a>
                                                     <a target="blank" href="{{ url('pernyataan_pdf?nik=').$item->nik }}" class="btn btn-warning btn-sm"> <i class="fa fa-print"></i>&nbsp; Pernyatan</a>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-danger btn-sm btn-delete" data-url="{{ url('admin/delete-formulir',$item->id) }}">Hapus</button>
                                                 </td>
                                             </tr>
                                             @endforeach

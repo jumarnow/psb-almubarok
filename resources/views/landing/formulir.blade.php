@@ -11,13 +11,13 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="">NAMA LENGKAP*</label>
+                                <label for="">NAMA LENGKAP <span style="color:red">*</span></label>
                                 <input type="text" class="form-control" name="nama" placeholder="" autocomplete="off"
                                     required="">
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="">NIK (Nomor Induk Keluarga)*</label>
+                                    <label for="">NIK (Nomor Induk Keluarga) <span style="color:red">*</span></label>
                                     <input type="number" maxlength="30" class="form-control" name="nik" placeholder=""
                                         autocomplete="off" required="">
                                 </div>
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="">JENIS KELAMIN*</label>
+                                <label for="">JENIS KELAMIN <span style="color:red">*</span></label>
                                 <input required type="radio" name="jenis_kelamin" value="Laki-laki" id="lk"> <label
                                     for="lk">Laki-laki</label>
                                 <input required type="radio" name="jenis_kelamin" value="Perempuan" id="pr"> <label
@@ -36,18 +36,18 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="tempat_lahir">TEMPAT LAHIR*</label>
+                                    <label for="tempat_lahir">TEMPAT LAHIR <span style="color:red">*</span></label>
                                     <input type="text" class="form-control" name="tempat_lahir" required="">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="tanggal_lahir">TANGGAL LAHIR*</label>
-                                    <input type="text" class="form-control datepicker" name="tanggal_lahir"
+                                    <label for="tanggal_lahir">TANGGAL LAHIR <span style="color:red">*</span></label>
+                                    <input type="date" class="form-control" name="tanggal_lahir"
                                         required="">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="">AGAMA*</label>
+                                    <label for="">AGAMA <span style="color:red">*</span></label>
                                     <select name="agama" class="form-control" id="" required>
                                         @foreach (listAgama() as $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
@@ -61,11 +61,11 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="">ANAK KE*</label>
+                                    <label for="">ANAK KE <span style="color:red">*</span></label>
                                     <input type="number" class="form-control" name="anak_ke" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">JUMLAH SAUDARA*</label>
+                                    <label for="">JUMLAH SAUDARA <span style="color:red">*</span></label>
                                     <input type="number" class="form-control" name="jumlah_saudara" required>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@
                         <div class="card-body">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="">PROVINSI*</label>
+                                    <label for="">PROVINSI <span style="color:red">*</span></label>
                                     <select name="provinsi" id="provinsi" class="form-control select2" required>
                                         <option value="">PILIH PROVINSI</option>
                                         @foreach (getProvinsi() as $item)
@@ -126,25 +126,25 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">KEBUPATEN/KOTA*</label>
+                                    <label for="">KEBUPATEN/KOTA <span style="color:red">*</span></label>
                                     <select name="kabupaten" id="kabupaten" class="form-control select2" required>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="">KECAMATAN*</label>
+                                    <label for="">KECAMATAN <span style="color:red">*</span></label>
                                     <select name="kecamatan" id="kecamatan" class="form-control select2" required>
 
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">DESA/KELURAHAN*</label>
+                                    <label for="">DESA/KELURAHAN <span style="color:red">*</span></label>
                                     <input type="text" class="form-control" name="kelurahan" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="">ALAMAT LENGKAP*</label>
+                                <label for="">ALAMAT LENGKAP <span style="color:red">*</span></label>
                                 <textarea name="alamat_lengkap" class="form-control" cols="30" rows="3"></textarea>
                             </div>
                         </div>
@@ -157,11 +157,11 @@
                         <div class="card-body">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="">NAMA AYAH*</label>
+                                    <label for="">NAMA AYAH <span style="color:red">*</span></label>
                                     <input type="text" class="form-control" name="nama_ayah" required="">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">STATUS AYAH*</label>
+                                    <label for="">STATUS AYAH <span style="color:red">*</span></label>
                                     <select name="status_ayah" class="form-control" id="" required>
                                         <option value="Hidup">Hidup</option>
                                         <option value="Meninggal">Meninggal</option>
@@ -171,18 +171,18 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="tempat_lahir">TEMPAT LAHIR*</label>
+                                    <label for="tempat_lahir">TEMPAT LAHIR <span style="color:red">*</span></label>
                                     <input type="text" class="form-control" name="tempat_lahir_ayah" required="">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="tanggal_lahir">TANGGAL LAHIR*</label>
-                                    <input type="text" class="form-control datepicker" name="tanggal_lahir_ayah"
+                                    <label for="tanggal_lahir">TANGGAL LAHIR <span style="color:red">*</span></label>
+                                    <input type="date" class="form-control" name="tanggal_lahir_ayah"
                                         required="">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="">PENDIDIKAN TERAKHIR*</label>
+                                    <label for="">PENDIDIKAN TERAKHIR <span style="color:red">*</span></label>
                                     <select name="pendidikan_ayah" class="form-control" id="" required>
                                         @foreach (listPendidikan() as $item)
                                         <option value="{{ $item }}">{{ $item }}</option>
@@ -190,7 +190,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">PEKERJAAN UTAMA*</label>
+                                    <label for="">PEKERJAAN UTAMA <span style="color:red">*</span></label>
                                     <input type="text" class="form-control" name="pekerjaan_ayah" required>
                                 </div>
                             </div>
@@ -207,11 +207,11 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="">NAMA IBU*</label>
+                                    <label for="">NAMA IBU <span style="color:red">*</span></label>
                                     <input type="text" class="form-control" name="nama_ibu" required="">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">STATUS IBU*</label>
+                                    <label for="">STATUS IBU <span style="color:red">*</span></label>
                                     <select name="status_ibu" class="form-control" id="" required>
                                         <option value="Hidup">Hidup</option>
                                         <option value="Meninggal">Meninggal</option>
@@ -221,18 +221,18 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="tempat_lahir">TEMPAT LAHIR*</label>
+                                    <label for="tempat_lahir">TEMPAT LAHIR <span style="color:red">*</span></label>
                                     <input type="text" class="form-control" name="tempat_lahir_ibu" required="">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="tanggal_lahir">TANGGAL LAHIR*</label>
-                                    <input type="text" class="form-control datepicker" name="tanggal_lahir_ibu"
+                                    <label for="tanggal_lahir">TANGGAL LAHIR <span style="color:red">*</span></label>
+                                    <input type="date" class="form-control" name="tanggal_lahir_ibu"
                                         required="">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="">PENDIDIKAN TERAKHIR*</label>
+                                    <label for="">PENDIDIKAN TERAKHIR <span style="color:red">*</span></label>
                                     <select name="pendidikan_ibu" class="form-control" id="" required>
                                         @foreach (listPendidikan() as $item)
                                         <option value="{{ $item }}">{{ $item }}</option>
@@ -240,7 +240,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">PEKERJAAN UTAMA*</label>
+                                    <label for="">PEKERJAAN UTAMA <span style="color:red">*</span></label>
                                     <input type="text" class="form-control" name="pekerjaan_ibu" required>
                                 </div>
                             </div>
@@ -269,7 +269,7 @@
                     </div>
                     <div class="card-body">
                         <div class="form-group mb-0">
-                            <p>* WAJIB DIISI</p>
+                            <p> <span style="color: red">*</span> WAJIB DIISI</p>
                         </div>
                     </div>
                 </div>

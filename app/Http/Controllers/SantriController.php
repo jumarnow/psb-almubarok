@@ -130,4 +130,10 @@ class SantriController extends Controller
     {
         //
     }
+
+    public function delete_formulir($id)
+    {
+        $data = Santri::find($id);
+        $data->delete();
+    }
 }

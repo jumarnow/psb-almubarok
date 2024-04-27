@@ -36,5 +36,6 @@ Route::get('formulir_pdf', [SantriController::class,'formulir_pdf']);
 Route::prefix('admin')->middleware(['auth'])->group(function(){
     Route::get('/', [DashboardController::class, 'index']);
     Route::get('/formulir', [SantriController::class, 'index']);
+    Route::get('/delete-formulir/{id}', [SantriController::class, 'delete_formulir']);
 });
 

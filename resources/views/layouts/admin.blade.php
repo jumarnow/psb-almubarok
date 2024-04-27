@@ -165,6 +165,22 @@
 
     <!-- Template JS File -->
     <script src="{{ asset('assets') }}/js/scripts.js"></script>
+
+    <script>
+        $(document).on('click','.btn-delete', function(){
+            var result = confirm("Apakah Anda yakin ingin melanjutkan?");
+
+            if (result) {
+                // alert("Anda memilih 'Ya'.");
+                let url = $(this).data("url");
+                $.get(url, function(){
+                    location.reload();
+                })
+            } else {
+                // alert("Anda memilih 'Batal' atau menutup pesan konfirmasi.");
+            }
+        })
+    </script>
 </body>
 
 </html>
