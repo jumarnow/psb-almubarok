@@ -205,7 +205,7 @@
             <tr>
                 <td></td>
                 <td>Tempat, Tanggal Lahir</td>
-                <td>: {{ $santri->tempat_lahir_ayah }}, {{ Carbon\Carbon::parse($santri->tanggal_lahir_ayatempat_lahir_ayah)->isoFormat('DD MMMM Y') }}</td>
+                <td>: {{ $santri->tempat_lahir_ayah }}, {{ Carbon\Carbon::parse($santri->tanggal_lahir_ayah)->isoFormat('DD MMMM Y') }}</td>
             </tr>
             <tr>
                 <td></td>
@@ -245,7 +245,7 @@
             <tr>
                 <td></td>
                 <td>Tempat, Tanggal Lahir</td>
-                <td>: {{ $santri->tempat_lahir_ibu }}, {{ Carbon\Carbon::parse($santri->tanggal_lahir_ayatempat_lahir_ibu)->isoFormat('DD MMMM Y') }}</td>
+                <td>: {{ $santri->tempat_lahir_ibu }}, {{ Carbon\Carbon::parse($santri->tanggal_lahir_ibu)->isoFormat('DD MMMM Y') }}</td>
             </tr>
             <tr>
                 <td></td>
