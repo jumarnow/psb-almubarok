@@ -106,16 +106,16 @@
                     <!-- INCLUDE MAIN MENU DI MENU.PHP -->
                     <ul class="sidebar-menu">
                         <li class="menu-header">Main Menu</li>
-                        <li class="{{ request()->is('admin') ? 'active' : '' }}"><a class="nav-link" href="admin"><i
+                        <li class="{{ request()->is('admin') ? 'active' : '' }}"><a class="nav-link" href="{{ url('admin') }}"><i
                                     class="fas fa-home fa-fw"></i>
                                 <span>Dashboard</span></a></li>
 
                         <li class="{{ request()->is('admin/formulir') ? 'active' : '' }}"><a class="nav-link"
-                                href="admin/formulir"><i class="fas fa-file-archive    "></i>
+                                href="{{ url('admin/formulir') }}"><i class="fas fa-file-archive    "></i>
                                 <span>Formulir</span></a></li>
 
                         <li class="{{ request()->is('admin/pengumuman') ? 'active' : '' }}"><a class="nav-link"
-                                href="admin/pengumuman"><i class="fas fa-bullhorn fa-fw"></i>
+                                href="{{ url('admin/pengumuman') }}"><i class="fas fa-bullhorn fa-fw"></i>
                                 <span>Pengumuman</span></a></li>
                     </ul>
                 </aside>
