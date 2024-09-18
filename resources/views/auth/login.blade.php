@@ -50,7 +50,7 @@
 
                             <div class="card-body">
                                 {{-- <form id="form-login" method="post" class="needs-validation" novalidate=""> --}}
-                                <form id="form-login" action="{{ url('login') }}" method="post" class="needs-validation" novalidate="">
+                                <form id="form-login" action="login" method="post" class="needs-validation" novalidate="">
                                     @csrf
                                     <div class="form-group">
                                         <label for="username">Username</label>
@@ -114,40 +114,6 @@
     </script>
     @endif
     <script>
-        // $(document).ready(function() {
-        //     $('#form-login').submit(function(e) {
-        //         e.preventDefault();
-        //         $.ajax({
-        //             type: 'POST',
-        //             url: '{{ url("login") }}',
-        //             data: {
-        //                 _token: '{{ csrf_token() }}',
-        //                 username: $('#username').val(),
-        //                 password: $('#password').val()
-        //             },
-        //             success: function(data) {
-        //                 console.log(data);
-        //                 if (data.success) {
-        //                     iziToast.success({
-        //                         title: 'Berhasil!',
-        //                         message: 'Anda akan dialihkan',
-        //                         position: 'topRight'
-        //                     });
-        //                     setTimeout(function() {
-        //                         window.location.reload();
-        //                     }, 2000);
-        //                 } else {
-        //                     iziToast.error({
-        //                         title: 'Maaf Bro',
-        //                         message: 'Username atau Password Salah',
-        //                         position: 'topCenter'
-        //                     });
-        //                 }
-        //             }
-        //         });
-        //         return false;
-        //     });
-        // });
     </script>
 </body>
 

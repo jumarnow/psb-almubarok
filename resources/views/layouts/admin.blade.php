@@ -84,7 +84,7 @@
                                 <i class="fas fa-cog"></i> Profil
                             </a>
                             {{-- <div class="dropdown-divider"></div> --}}
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                            <form id="logout-form" action="logout" method="POST"
                                 style="display: none;">
                                 @csrf
                             </form>
