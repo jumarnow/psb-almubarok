@@ -284,7 +284,7 @@
                             <li class="media">
                                 <img alt="image"
                                     class="mr-3 rounded-circle" width="50"
-                                    src="{{ asset('assets') }}/img/avatar/avatar-1.png">
+                                    src="assets/img/avatar/avatar-1.png">
                                 <div class="media-body">
                                     <div class="media-title">Kantor Al Mubarok Putra</div>
                                     <div class="text-job text-muted"><a
@@ -295,7 +295,7 @@
                             <li class="media">
                                 <img alt="image"
                                     class="mr-3 rounded-circle" width="50"
-                                    src="{{ asset('assets') }}/img/avatar/avatar-1.png">
+                                    src="assets/img/avatar/avatar-1.png">
                                 <div class="media-body">
                                     <div class="media-title">Kantor Al Mubarok Putri</div>
                                     <div class="text-job text-muted"><a
@@ -320,7 +320,6 @@
         let provinsiArr = provinsi.split(',');
         $.get("{{ url('https://jumarnow.github.io/api-wilayah-indonesia/api/regencies/') }}"+provinsiArr[0]+".json", function(data){
             $('#kabupaten').empty();
-            // console.log(data);
             $('#kabupaten').append('<option value="">PILIH KABUPATEN/KOTA</option>');
             $.each(data, function(index, kabupaten){
                 $('#kabupaten').append('<option value="' + kabupaten.id+','+kabupaten.name + '">' + kabupaten.name + '</option>');
@@ -333,7 +332,6 @@
         console.log(kabupatenArr);
         $.get("{{ url('https://jumarnow.github.io/api-wilayah-indonesia/api/districts/') }}"+kabupatenArr[0]+".json", function(data){
             $('#kecamatan').empty();
-            // console.log(data);
             $('#kecamatan').append('<option value="">PILIH KABUPATEN/KOTA</option>');
             $.each(data, function(index, kecamatan){
                 $('#kecamatan').append('<option value="' + kecamatan.id+','+ kecamatan.name+ '">' + kecamatan.name + '</option>');

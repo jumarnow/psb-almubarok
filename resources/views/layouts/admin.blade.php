@@ -7,33 +7,33 @@
     <title>PSB &mdash; Al Mubarok</title>
 
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
 
     <!-- CSS TOASTR -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/izitoast/css/iziToast.min.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/select2/dist/css/select2.min.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="assets/modules/izitoast/css/iziToast.min.css">
+    <link rel="stylesheet" href="assets/modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="assets/modules/summernote/summernote-bs4.css">
 
     <!-- CSS DATATABLE -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/datatables/datatables.min.css">
+    <link rel="stylesheet" href="assets/modules/datatables/datatables.min.css">
     <link rel="stylesheet"
-        href="{{ asset('assets') }}/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/bootstrap-daterangepicker/daterangepicker.css">
+        href="assets/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css">
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/components.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     <!-- Start GA -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script> -->
 
-    <script src="{{ asset('assets') }}/modules/jquery.min.js"></script>
+    <script src="assets/modules/jquery.min.js"></script>
     <!-- JS Libraies -->
-    <script src="{{ asset('assets') }}/modules/izitoast/js/iziToast.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/sweetalert/sweetalert.min.js"></script>
+    <script src="assets/modules/izitoast/js/iziToast.min.js"></script>
+    <script src="assets/modules/sweetalert/sweetalert.min.js"></script>
     <!-- JS Libraies -->
-    <script src="{{ asset('assets') }}/modules/cleave-js/dist/cleave.min.js"></script>
+    <script src="assets/modules/cleave-js/dist/cleave.min.js"></script>
     <style>
         .modal-backdrop {
             position: inherit;
@@ -71,7 +71,7 @@
 
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image" src="{{ asset('assets') }}/img/avatar/avatar-1.png"
+                            <img alt="image" src="assets/img/avatar/avatar-1.png"
                                 class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->name }}</div>
                         </a>
@@ -140,31 +140,31 @@
 
     <!-- General JS Scripts -->
 
-    <script src="{{ asset('assets') }}/modules/popper.js"></script>
-    <script src="{{ asset('assets') }}/modules/tooltip.js"></script>
-    <script src="{{ asset('assets') }}/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/moment.min.js"></script>
-    <script src="{{ asset('assets') }}/js/stisla.js"></script>
+    <script src="assets/modules/popper.js"></script>
+    <script src="assets/modules/tooltip.js"></script>
+    <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="assets/modules/moment.min.js"></script>
+    <script src="assets/js/stisla.js"></script>
 
     <!-- JS DATATABLE -->
-    <script src="{{ asset('assets') }}/modules/datatables/datatables.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/modules/datatables/datatables.min.js"></script>
+    <script src="assets/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+    <script src="assets/modules/jquery-ui/jquery-ui.min.js"></script>
 
     <!-- Page Specific DATATABLE -->
-    <script src="{{ asset('assets') }}/js/page/modules-datatables.js"></script>
-    <script src="{{ asset('assets') }}/modules/select2/dist/js/select2.full.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="{{ asset('assets') }}/modules/summernote/summernote-bs4.js"></script>
+    <script src="assets/js/page/modules-datatables.js"></script>
+    <script src="assets/modules/select2/dist/js/select2.full.min.js"></script>
+    <script src="assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="assets/modules/summernote/summernote-bs4.js"></script>
 
     <!-- Page Specific JS File -->
-    {{-- <script src="{{ asset('assets') }}/js/page/index-0.js"></script> --}}
+    {{-- <script src="assets/js/page/index-0.js"></script> --}}
 
 
     <!-- Template JS File -->
-    <script src="{{ asset('assets') }}/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 
     <script>
         $(document).on('click','.btn-delete', function(){

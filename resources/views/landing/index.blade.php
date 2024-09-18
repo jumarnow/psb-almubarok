@@ -138,7 +138,7 @@
                                                 <li class="media">
                                                     <img alt="image"
                                                         class="mr-3 rounded-circle" width="50"
-                                                        src="{{ asset('assets') }}/img/avatar/avatar-1.png">
+                                                        src="assets/img/avatar/avatar-1.png">
                                                     <div class="media-body">
                                                         <div class="media-title">Kantor Al Mubarok Putra</div>
                                                         <div class="text-job text-muted"><a
@@ -149,7 +149,7 @@
                                                 <li class="media">
                                                     <img alt="image"
                                                         class="mr-3 rounded-circle" width="50"
-                                                        src="{{ asset('assets') }}/img/avatar/avatar-1.png">
+                                                        src="assets/img/avatar/avatar-1.png">
                                                     <div class="media-body">
                                                         <div class="media-title">Kantor Al Mubarok Putri</div>
                                                         <div class="text-job text-muted"><a

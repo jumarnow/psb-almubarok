@@ -15,21 +15,21 @@
     <meta property="og:ttl" content="3600">
 
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/select2/dist/css/select2.min.css">
-    {{-- <link rel="stylesheet" href="{{ asset('assets') }}/modules/bootstrap-daterangepicker/daterangepicker.css"> --}}
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/izitoast/css/iziToast.min.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/animate/animate.css">
+    <link rel="stylesheet" href="assets/modules/select2/dist/css/select2.min.css">
+    {{-- <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css"> --}}
+    <link rel="stylesheet" href="assets/modules/izitoast/css/iziToast.min.css">
+    <link rel="stylesheet" href="assets/modules/animate/animate.css">
     <!-- CSS DATATABLE -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/modules/datatables/datatables.min.css">
+    <link rel="stylesheet" href="assets/modules/datatables/datatables.min.css">
     <link rel="stylesheet"
-        href="{{ asset('assets') }}/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+        href="assets/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
     <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/components.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     <!-- Start GA -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
@@ -53,7 +53,7 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background: url('{{ asset('assets') }}/img/spinner-primary.svg') 50% 50% no-repeat rgb(249, 249, 249);
+            background: url('assets/img/spinner-primary.svg') 50% 50% no-repeat rgb(249, 249, 249);
             opacity: .9;
         }
     </style>
@@ -65,14 +65,14 @@
         <a
             href="https://api.whatsapp.com/send?phone=+6285701885618&text=Assalamualaikum%2525252C%25252Bmohon%25252Binfo%25252Bpendaftaran">
 
-            <img src="{{ asset('assets') }}/img/wa.png" width="150"> </a>
+            <img src="assets/img/wa.png" width="150"> </a>
     </div>
     <div id="app">
         <div class="main-wrapper container">
             <div class="navbar-bg"></div>
             <nav class="navbar navbar-expand-lg main-navbar">
                 <a href="." class="navbar-brand sidfebar-gone-hide d-none d-sm-block">
-                    {{-- <img src="{{ asset('assets') }}/img/logo/logo436.png" width="50"> --}}
+                    {{-- <img src="assets/img/logo/logo436.png" width="50"> --}}
                     Al Mubarok Mranggen </a>
                 <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i
                         class="fas fa-bars"></i></a>
@@ -85,7 +85,7 @@
 
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image" src="{{ asset('assets') }}/img/avatar/avatar-1.png"
+                            <img alt="image" src="assets/img/avatar/avatar-1.png"
                                 class="rounded-circle mr-1">
                                 @if (auth()->check())
                                 <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->name }}</div>
@@ -147,27 +147,27 @@
 
 
     <!-- General JS Scripts -->
-    <script src="{{ asset('assets') }}/modules/jquery.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/popper.js"></script>
-    <script src="{{ asset('assets') }}/modules/tooltip.js"></script>
-    <script src="{{ asset('assets') }}/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/moment.min.js"></script>
-    <script src="{{ asset('assets') }}/js/stisla.js"></script>
+    <script src="assets/modules/jquery.min.js"></script>
+    <script src="assets/modules/popper.js"></script>
+    <script src="assets/modules/tooltip.js"></script>
+    <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="assets/modules/moment.min.js"></script>
+    <script src="assets/js/stisla.js"></script>
 
     <!-- JS Libraies -->
-    <script src="{{ asset('assets') }}/modules/select2/dist/js/select2.full.min.js"></script>
-    {{-- <script src="{{ asset('assets') }}/modules/bootstrap-daterangepicker/daterangepicker.js"></script> --}}
-    <script src="{{ asset('assets') }}/modules/izitoast/js/iziToast.min.js"></script>
+    <script src="assets/modules/select2/dist/js/select2.full.min.js"></script>
+    {{-- <script src="assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script> --}}
+    <script src="assets/modules/izitoast/js/iziToast.min.js"></script>
     <!-- Page Specific JS File -->
 
     <!-- JS DATATABLE -->
-    <script src="{{ asset('assets') }}/modules/datatables/datatables.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
-    <script src="{{ asset('assets') }}/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+    <script src="assets/modules/datatables/datatables.min.js"></script>
+    <script src="assets/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
 
     <!-- Template JS File -->
-    <script src="{{ asset('assets') }}/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
     <script type="text/javascript">
