@@ -14,7 +14,16 @@ class SantriController extends Controller
      */
     public function index()
     {
-        $data['santri'] = Santri::all();
+        $data['santri'] = Santri::select("*");
+        if (request()->year) {
+            $data['santri'] = $data['santri']->whereYear('created_at', request()->year);
+        }else{
+            $data['santri'] = $data['santri']->whereYear('created_at', Carbon::now()->year);
+        }
+        if(request()->search){
+            $data['santri'] = $data['santri']->where('nama','like','%'.request()->search.'%');
+        }
+        $data['santri'] = $data['santri']->orderBy('id','desc')->paginate(10);
         return view('santri.index', $data);
     }
 

@@ -84,8 +84,7 @@
                                 <i class="fas fa-cog"></i> Profil
                             </a>
                             {{-- <div class="dropdown-divider"></div> --}}
-                            <form id="logout-form" action="logout" method="POST"
-                                style="display: none;">
+                            <form id="logout-form" action="logout" method="POST" style="display: none;">
                                 @csrf
                             </form>
                             <a href="#" class="dropdown-item has-icon text-danger"
@@ -107,8 +106,8 @@
                     <!-- INCLUDE MAIN MENU DI MENU.PHP -->
                     <ul class="sidebar-menu">
                         <li class="menu-header">Main Menu</li>
-                        <li class="{{ request()->is('admin') ? 'active' : '' }}"><a class="nav-link"
-                                href="admin"><i class="fas fa-home fa-fw"></i>
+                        <li class="{{ request()->is('admin') ? 'active' : '' }}"><a class="nav-link" href="admin"><i
+                                    class="fas fa-home fa-fw"></i>
                                 <span>Dashboard</span></a></li>
 
                         <li class="{{ request()->is('admin/formulir') ? 'active' : '' }}"><a class="nav-link"
@@ -128,8 +127,7 @@
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2024 Al Mubarok <div class="bullet"></div> Template By <a
-                        href="">Stisla</a>
+                    Copyright &copy; 2024 Al Mubarok <div class="bullet"></div> Template By <a href="">Stisla</a>
                 </div>
                 <div class="footer-right">
 
@@ -167,13 +165,13 @@
     <script src="{{ asset('assets') }}/js/scripts.js"></script>
 
     <script>
-        $(document).on('click','.btn-delete', function(){
+        $(document).on('click', '.btn-delete', function() {
             var result = confirm("Apakah Anda yakin ingin melanjutkan?");
 
             if (result) {
                 // alert("Anda memilih 'Ya'.");
                 let url = $(this).data("url");
-                $.get(url, function(){
+                $.get(url, function() {
                     location.reload();
                 })
             } else {

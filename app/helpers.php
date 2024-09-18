@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Santri;
 use Illuminate\Support\Facades\Http;
 
 function listAgama()
@@ -31,9 +32,7 @@ function getProvinsi()
     return $data;
 }
 
-function daerahAlt($num)
+function getYears()
 {
-    if ($num == 1) {
-        
-    }
+    return ['2024'];
 }

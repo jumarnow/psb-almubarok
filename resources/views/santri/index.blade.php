@@ -9,17 +9,19 @@
             <div class="row mt-2">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body">
-                            <form action="" method="get" class="ml-3 mb-2">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6">
-                                        <input type="text" class="form-control" name="nama">
-                                    </div>
-                                    <button class="btn btn-info"><i class="fa fa-search"></i></button>
+                        <div class="card-body p-0">
+                            <form action="" method="get" class="form-inline">
+                                <select name="year" class="form-control mr-2" id="">
+                                    @foreach (getYears() as $item)
+                                        <option value="{{ $item }}">{{ $item }}</option>
+                                    @endforeach
+                                </select>
+                                    <input type="text" class="form-control" name="search" value="{{ request()->search }}">
+                                    <button class="btn btn-info ml-2"><i class="fa fa-search"></i></button>
                                 </div>
                             </form>
 
-                            <div class="card-body p-0">
+                            {{-- <div class="card-body p-0"> --}}
                                 <div class="table-responsive">
                                     <table id="" class="table table-striped ">
                                         <thead>
@@ -61,8 +63,9 @@
                                         </tbody>
 
                                     </table>
+                                    {{ $santri->appends(request()->all())->links('pagination::bootstrap-4') }}
                                 </div>
-                            </div>
+                            {{-- </div> --}}
                         </div>
                     </div>
                 </div>
